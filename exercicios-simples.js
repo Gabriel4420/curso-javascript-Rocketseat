@@ -102,4 +102,15 @@
 
       experiencia(anosEstudo);
 
+       //document.getElementsByTagName('input')[0];
+      //document.getElementsByClassName('nome')[0];
+      //document.getElementById('nome');
       
+      var inputElement = document.querySelector('input[name=nome]');
+      var btnElement = document.querySelector('button[class=btn]');
+    
+      btnElement.onclick = function (){
+          var text = inputElement.value;
+          alert(text);
+      }
+      console.log(inputElement);
