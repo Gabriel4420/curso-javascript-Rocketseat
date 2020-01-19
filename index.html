@@ -4,44 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="exercicios-simples.js"></script>
     <title>Curso de Javascript</title>
 </head>
 <body>
+    
+    <div id="app">
+        <input type="text" name="nome" id="nome" class="nome"/>
+        <button class="btn">adicionar</button>
+    </div>
 
     <script>
-        //Javascript
-        humano = {
-            nome:"Gabriel Rodrigues",
-            peso:110,
-            idade:21,
-            humano:true,
-            trabalhando:false
-        };
-
-        console.log(humano);
-
-        // operações matemáticas com javascript
-
-        /* 
-            Soma com string, é concatenado o valor, 
-            por exemplo: a = "10" , y = 5;
-
-            quando der o console.log(a+y); O resultado
-            obtido será: 105
-            ao invés do resultado esperado que seria:
-            15
-
-        
-        
-        */
-
-        a = "10", y = 5;
-
-        console.log(a+y);
-
-        
-
+      //document.getElementsByTagName('input')[0];
+      //document.getElementsByClassName('nome')[0];
+      //document.getElementById('nome');
+      
+      var inputElement = document.querySelector('input[name=nome]');
+      var btnElement = document.querySelector('button[class=btn]');
+    
+      btnElement.onclick = function (){
+          var text = inputElement.value;
+          alert(text);
+      }
+      console.log(inputElement);
     </script>
+    
     
 </body>
 </html>
