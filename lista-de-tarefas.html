@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>lista de afazeres</title>
 </head>
 <body>
     <nav id="navigation">
         <ul class="menu">
             <li class="item">
-                <a type="link" href="lista-de-tarefas.html">ir para lista de tarefas</a>
+                <a type="link" href="index.html">Home</a>
             </li>
         </ul>
     </nav>
+
+    <div id="lista">
+        <ul>
+            <li class="items">Fazer Café <a class="button" href="#"> excluir</a></li>
+            <li class="items">Estudar javascript <a class="button" href="#"> excluir</a></li> 
+            <li class="items">Acessar a comunidade rocketseat <a class="button" href="#"> excluir</a></li> 
+        </ul>
+        <input type="text" name="list-to-do" id="todo" placeholder="Digite uma tarefa a ser adicionada" aria-autocomplete="both
+        "/>
+        <button class="btn-add">Adicionar</button>
+    </div>
     
     <script type="text/javascript" src="list-todo.js"></script>
 </body>
