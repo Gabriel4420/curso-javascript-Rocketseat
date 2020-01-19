@@ -59,13 +59,47 @@
         pares(32,321)
 
        var skill = ["javascript","NodeJs","ReactJS","React-native"];
-       element = "js";
+       var i = "j";
+       var element = skill.indexOf(i);
         function haveSkl(skill){
-            element = skill.indexOf(element);
-            if(element === skill.indexOf(element))
-                console.log(true);
-            else
-                console.log(false);
+            
 
+            if(element >= 0){
+                    console.log(true);
+                }
+            else{
+                console.log(false);
+            }
         }
         haveSkl(element);
+
+    
+
+      var anosEstudo = 7;
+
+      function experiencia(anos){
+            switch(anos){
+                case 0-1 :
+                    console.log('iniciante');
+                    break;
+                case 2 :
+                case 3 :        
+                    console.log('intermediario');
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    console.log('experiente');
+                    break;
+                case 7 :
+                    console.log('mestre Jedi');
+                    break;
+                default:
+                    console.log('opção inexistente');
+                    break;                
+            }
+      }
+
+      experiencia(anosEstudo);
+
+      
