@@ -66,7 +66,7 @@ function renderLoading(loading) {
   function renderError(loading) {
     listElement.innerHTML = "";
 
-    var textElement = document.createTextNode('Erro!');
+    var textElement = document.createTextNode('Usuario não encontrado!');
     var errorElement = document.createElement('li');
 
     errorElement.style.color = "#F00";
