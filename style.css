@@ -18,6 +18,7 @@ body{
 #navigation a{
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 
 
@@ -77,4 +78,25 @@ input{
 
 .button:hover{
     background-color: tomato;
+}
+
+.btn-add{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+    background-color: darkgreen;
+    padding-left: 5px;
+    padding-right: 10px;
+    position: relative;
+    text-align: right;
+    margin-left: 5px;
+    
+}
+
+#todo{
+    margin-left: 55px;
+}
+
+.btn-add:hover{
+    background-color: green;
 }
