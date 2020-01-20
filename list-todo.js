@@ -1,38 +1,57 @@
 var listElement = document.querySelector('#lista ul');
-var inputElement = document.querySelector('#lista input');
-var btnElement = document.querySelector('#btn-adicionar');
+var inputElement = document.querySelector('input');
+var buttonElement = document.querySelector('button');
 
-var todos = [
-    'Fazer café',
-    'Estudar Javascript',
-    'Acessar comunidade da rocketseat',
-];
 
-function renderTodo(){
+var listas = JSON.parse(localStorage.getItem('lista-de-afazeres'));
+
+function renderLista(){
 
     listElement.innerHTML = '';
 
-    for (todo of todos){
-        var todoElement = document.createElement('li');
-        var todoText = document.createTextNode(todo);
+    for (lista of listas){
+        var listaElement = document.createElement("li");
+        var listaText = document.createTextNode(lista);
 
-        todoElement.appendChild(todoText);
-        listElement.appendChild(todoElement);
+        var linkElement = document.createElement('a');
 
+        var pos = listas.indexOf(lista);
+
+        linkElement.setAttribute('onclick','deleteItemLista('+pos+')');
+
+
+        linkElement.setAttribute('href', '#');
+        linkElement.setAttribute('class', 'button');
+        var linkText = document.createTextNode('excluir');
+
+        linkElement.appendChild(linkText);
+        listaElement.appendChild(linkElement);
+        listaElement.appendChild(listaText);
+        listElement.appendChild(listaElement);
     }
 }
 
+renderLista();
 
+function addTask(){
+    var tasktext = inputElement.value;
 
-function addTodo(){
-    var todoText = inputElement.value;
-
-    todos.push(todoText);
+    listas.push(tasktext);
 
     inputElement.value = '';
-
-    renderTodo();
+    renderLista();
+    saveItemLista();
 }
 
-btnElement.onclick = addTodo();
+buttonElement.onclick = addTask;
 
+function deleteItemLista(pos){
+    listas.splice(pos,1);
+    renderLista();
+    saveItemLista();
+}
+
+function saveItemLista(){
+    JSON
+    localStorage.setItem('lista-de-afazeres', JSON.stringify(listas));
+}
