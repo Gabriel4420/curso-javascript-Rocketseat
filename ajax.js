@@ -1,2 +1,0 @@
-xhr = XMLHttpRequest();
-
