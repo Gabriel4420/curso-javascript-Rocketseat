@@ -34,16 +34,18 @@ function renderLista(){
 renderLista();
 
 function addTask(){
+    
     var tasktext = inputElement.value;
 
     listas.push(tasktext);
 
     inputElement.value = '';
+
     renderLista();
     saveItemLista();
 }
 
-buttonElement.onclick = addTask;
+
 
 function deleteItemLista(pos){
     listas.splice(pos,1);
@@ -55,3 +57,5 @@ function saveItemLista(){
     JSON
     localStorage.setItem('lista-de-afazeres', JSON.stringify(listas));
 }
+
+buttonElement.onclick = addTask;

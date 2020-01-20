@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Requests ajax</title>
 </head>
-<body>
-    <script type="text/javascript" src="ajax.js"></script>
+<body class="req-ajax">
+
+    <nav id="navigation">
+        <ul class="menu">
+            <li class="item">
+                <a type="link" href="lista-de-tarefas.html">ir para lista de tarefas</a>
+            </li>
+            <li class="item">
+                <a type="link" href="index.html">Função alerta</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <h1>Buscador de Repositórios</h1>
+    <div id="lista-git">
+        <ul>
+            
+        </ul>
+        <input type="text" id="todo" placeholder="Digite um usuario gitHub "/>
+        <button class="btn-add" id="btn-adicionar-git">Buscar</button>
+    </div>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/javascript/ajax.js"></script>
 </body>
 </html>
