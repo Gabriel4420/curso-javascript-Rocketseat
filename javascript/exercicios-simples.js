@@ -8,6 +8,9 @@
         };
 
         
+
+        // var , let & const
+        
        
         // operações matemáticas com javascript
 
